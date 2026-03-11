@@ -1,0 +1,210 @@
+.login-page{
+  display:flex;
+  height:100vh;
+  font-family:system-ui;
+  background: linear-gradient(270deg,#6366f1,#8b5cf6,#3b82f6);
+  background-size: 600% 600%;
+  animation: gradientMove 12s ease infinite;
+}
+
+/* LEFT SIDE */
+
+.login-left{
+  flex:1;
+  background:linear-gradient(135deg,#6366f1,#4f46e5);
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:40px;
+  text-align:center;
+}
+
+.login-left img{
+  width:340px;
+  margin-top:30px;
+  border-radius:12px;
+  animation:float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-12px)}
+  100%{transform:translateY(0)}
+}
+
+/* RIGHT SIDE */
+
+.login-right{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#f9fafb;
+}
+
+.login-card{
+  width:350px;
+  padding:30px;
+  border-radius:14px;
+
+  backdrop-filter: blur(20px);
+  background: rgba(255,255,255,0.85);
+
+  box-shadow:0 20px 40px rgba(0,0,0,0.2);
+
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.login-card input{
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ddd;
+}
+
+.login-btn{
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  background:linear-gradient(135deg,#6366f1,#4f46e5);
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:transform .2s ease;
+}
+
+.login-btn:hover{
+  transform:translateY(-2px);
+}
+
+.login-btn:hover{
+  background:#4f46e5;
+}
+
+.divider{
+  text-align:center;
+  margin:10px 0;
+  color:#999;
+}
+
+.google-btn,
+.apple-btn{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  justify-content:center;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  background:white;
+  cursor:pointer;
+}
+
+.signup-link{
+  text-align:center;
+  margin-top:10px;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position:0% 50%;
+  }
+  50% {
+    background-position:100% 50%;
+  }
+  100% {
+    background-position:0% 50%;
+  }
+}
+
+.glow{
+  position:absolute;
+  border-radius:50%;
+  filter: blur(120px);
+  opacity:0.6;
+  z-index:0;
+  animation: glowMove 20s ease infinite;
+}
+
+.glow1{
+  width:400px;
+  height:400px;
+  background:#6366f1;
+  top:-100px;
+  left:-100px;
+}
+
+.glow2{
+  width:350px;
+  height:350px;
+  background:#8b5cf6;
+  bottom:-120px;
+  right:-80px;
+}
+
+.glow3{
+  width:300px;
+  height:300px;
+  background:#3b82f6;
+  top:50%;
+  left:40%;
+}
+
+@keyframes glowMove{
+
+  0%{
+    transform: translateY(0px) translateX(0px);
+  }
+
+  50%{
+    transform: translateY(-40px) translateX(40px);
+  }
+
+  100%{
+    transform: translateY(0px) translateX(0px);
+  }
+
+}
+
+.theme-toggle{
+  position:absolute;
+  top:20px;
+  right:20px;
+  border:none;
+  background:white;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  cursor:pointer;
+  font-size:18px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.dark{
+  background:#0f172a !important;
+}
+
+.dark .login-right{
+  background:#0f172a;
+}
+
+.dark .login-card{
+  background:rgba(30,41,59,0.9);
+  color:white;
+}
+
+.dark input{
+  background:#1e293b;
+  color:white;
+  border:1px solid #334155;
+}
+
+.dark .google-btn,
+.dark .apple-btn{
+  background:#1e293b;
+  color:white;
+  border:1px solid #334155;
+}

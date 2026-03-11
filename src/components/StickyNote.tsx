@@ -24,7 +24,7 @@ function StickyNote({ id, text, x, y, color, onMove, onDelete, onColorChange, se
     <Draggable
       nodeRef={nodeRef}
       defaultPosition={{ x, y }}
-      onStop={(e, data) => {
+      onStop={(_, data) => {
         onMove(id, data.x, data.y);
       }}
     >

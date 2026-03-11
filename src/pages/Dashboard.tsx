@@ -9,7 +9,7 @@ function Dashboard() {
 
   useEffect(()=>{
 
-    fetch("http://localhost:5000/boards")
+    fetch("https://ai-brainstrom-backend.onrender.com/boards")
       .then(res=>res.json())
       .then(data=>setBoards(data));
 
@@ -17,7 +17,7 @@ function Dashboard() {
 
   const createBoard = async () => {
 
-    const res = await fetch("http://localhost:5000/create-board",{
+    const res = await fetch("https://ai-brainstrom-backend.onrender.com/create-board",{
       method:"POST",
       headers:{ "Content-Type":"application/json" },
       body:JSON.stringify({ name })

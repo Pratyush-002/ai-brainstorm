@@ -1,0 +1,87 @@
+.dashboard{
+  min-height:100vh;
+  background:linear-gradient(135deg,#eef2ff,#f9fafb);
+  padding:40px;
+  font-family:system-ui;
+}
+
+/* NAVBAR */
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.user-profile{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.user-profile img{
+  border-radius:50%;
+}
+
+/* HERO */
+
+.hero{
+  margin-top:40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.hero img{
+  width:350px;
+  border-radius:12px;
+}
+
+.create-board{
+  margin-top:20px;
+}
+
+.create-board input{
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #ddd;
+}
+
+.create-board button{
+  margin-left:10px;
+  padding:10px 16px;
+  border:none;
+  background:#6366f1;
+  color:white;
+  border-radius:8px;
+}
+
+/* BOARDS */
+
+.boards-grid{
+  margin-top:60px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,200px);
+  gap:20px;
+}
+
+.board-card{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+.board-title{
+  cursor:pointer;
+  font-weight:600;
+}
+
+.delete-btn{
+  margin-top:10px;
+  background:#ef4444;
+  color:white;
+  border:none;
+  padding:6px 10px;
+  border-radius:6px;
+}

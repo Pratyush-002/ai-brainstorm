@@ -85,3 +85,22 @@
   padding:6px 10px;
   border-radius:6px;
 }
+
+.join-board{
+  margin-top:15px;
+}
+
+.join-board input{
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #ddd;
+}
+
+.join-board button{
+  margin-left:10px;
+  padding:10px 16px;
+  border:none;
+  background:#10b981;
+  color:white;
+  border-radius:8px;
+}

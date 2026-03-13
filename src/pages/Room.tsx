@@ -386,6 +386,16 @@ const logout = async () => {
 
 };
 
+const copyInviteLink = () => {
+
+  const link = window.location.href;
+
+  navigator.clipboard.writeText(link);
+
+  alert("Invite link copied!");
+
+};
+
 
 return (
   <div style={{ height: "100vh", position: "relative" }}>
@@ -441,6 +451,7 @@ return (
       <button onClick={summarizeBoard}>Summarize Board</button>
       <button onClick={undoBoard}>Undo</button>
       <button onClick={generateStartupPlan}>Generate Startup Plan</button>
+      <button onClick={copyInviteLink}>Share Board</button>
       <button onClick={logout}>Logout</button>
     </div>
 

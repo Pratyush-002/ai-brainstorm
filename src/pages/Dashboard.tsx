@@ -9,6 +9,7 @@ function Dashboard() {
   const [boards,setBoards] = useState<any[]>([]);
   const [name,setName] = useState("");
   const navigate = useNavigate();
+  const [roomId,setRoomId] = useState("")
 
   useEffect(()=>{
 
@@ -49,6 +50,17 @@ function Dashboard() {
 
   };
 
+  const joinBoard = () => {
+
+    if(!roomId){
+      alert("Enter room id");
+      return;
+    }
+
+    navigate(`/board/${roomId}`);
+
+  };
+
   return (
 
     <div className="dashboard">
@@ -79,23 +91,41 @@ function Dashboard() {
 
         <div className="hero-text">
 
-          <h1>Create your next big idea</h1>
+  <h1>Create your next big idea</h1>
 
-          <div className="create-board">
+  {/* CREATE BOARD */}
 
-            <input
-              value={name}
-              onChange={(e)=>setName(e.target.value)}
-              placeholder="Board name"
-            />
+  <div className="create-board">
 
-            <button onClick={createBoard}>
-              Create Board
-            </button>
+    <input
+      value={name}
+      onChange={(e)=>setName(e.target.value)}
+      placeholder="New board name"
+    />
 
-          </div>
+    <button onClick={createBoard}>
+      Create Board
+    </button>
 
-        </div>
+  </div>
+
+  {/* JOIN BOARD */}
+
+  <div className="join-board">
+
+    <input
+      value={roomId}
+      onChange={(e)=>setRoomId(e.target.value)}
+      placeholder="Enter Room ID"
+    />
+
+    <button onClick={joinBoard}>
+      Join Board
+    </button>
+
+  </div>
+
+</div>
 
         <img
           src="https://images.unsplash.com/photo-1553877522-43269d4ea984"

@@ -13,7 +13,7 @@ function Dashboard() {
 
   useEffect(()=>{
 
-    fetch("https://ai-brainstrom-backend.onrender.com/boards")
+    fetch("https://16.171.208.169:5000/boards")
       .then(res=>res.json())
       .then(data=>setBoards(data));
 
@@ -21,7 +21,7 @@ function Dashboard() {
 
   const createBoard = async () => {
 
-    const res = await fetch("https://ai-brainstrom-backend.onrender.com/create-board",{
+    const res = await fetch("https://16.171.208.169:5000/create-board",{
       method:"POST",
       headers:{ "Content-Type":"application/json" },
       body:JSON.stringify({ name })
@@ -35,7 +35,7 @@ function Dashboard() {
 
   const deleteBoard = async (id:string)=>{
 
-    await fetch(`https://ai-brainstrom-backend.onrender.com/delete-board/${id}`,{
+    await fetch(`https://16.171.208.169:5000/delete-board/${id}`,{
       method:"DELETE"
     });
 

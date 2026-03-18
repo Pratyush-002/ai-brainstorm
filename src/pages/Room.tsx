@@ -100,7 +100,7 @@ socket.on("load-events", (events: any[]) => {
 
     });
 
-    fetch(`https://16.171.208.169:5000/boards`)
+    fetch(`http://16.171.208.169:5000/boards`)
     .then(res => res.json())
     .then(data => {
 
@@ -166,7 +166,7 @@ const getUser = (id: string) => {
 
   const generateIdeas = async () => {
 
-  const res = await fetch("https://16.171.208.169:5000/generate-ideas", {
+  const res = await fetch("http://16.171.208.169:5000/generate-ideas", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -209,7 +209,7 @@ const moveNote = (id: string, x: number, y: number) => {
 };
 const clusterIdeas = async () => {
 
-  const res = await fetch("https://16.171.208.169:5000/cluster-notes", {
+  const res = await fetch("http://16.171.208.169:5000/cluster-notes", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -225,7 +225,7 @@ const clusterIdeas = async () => {
 
 const summarizeBoard = async () => {
 
-  const res = await fetch("https://16.171.208.169:5000/summarize-board", {
+  const res = await fetch("http://16.171.208.169:5000/summarize-board", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -241,7 +241,7 @@ const summarizeBoard = async () => {
 
 const undoBoard = async () => {
 
-  await fetch("https://16.171.208.169:5000/undo", {
+  await fetch("http://16.171.208.169:5000/undo", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -256,7 +256,7 @@ const undoBoard = async () => {
 
 const generateStartupPlan = async () => {
 
-  const res = await fetch("https://16.171.208.169:5000/generate-startup-plan",{
+  const res = await fetch("http://16.171.208.169:5000/generate-startup-plan",{
     method:"POST",
     headers:{
       "Content-Type":"application/json"
@@ -294,7 +294,7 @@ const changeNoteColor = (id: string, color: string) => {
 
 const renameBoard = async () => {
 
-  await fetch(`https://16.171.208.169:5000/boards/${roomId}`,{
+  await fetch(`http://16.171.208.169:5000/boards/${roomId}`,{
     method:"PATCH",
     headers:{
       "Content-Type":"application/json"
